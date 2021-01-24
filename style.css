@@ -73,8 +73,14 @@ footer {
 .string.fist {margin-top: 0;}
 .string.last {margin-bottom: 0;}
 */
+.menu {
+    padding-left:0}
 .menu-item {
     list-style-type: none;
+}
+.menu-item {
+}
+.menu-item>a {display: block
 }
 .horizontal>.menu-item {
     display: inline-block;
@@ -84,7 +90,8 @@ footer {
     display: table;
     clear: both;
 }
-a:link, a:hover, a:active, a:visited {
+a:link, a:hover, a:active, a:focus, a:visited {
+    outline: none;
     text-decoration:none;
     color:#222222;
 }
@@ -192,8 +199,61 @@ form#search>input[type="image"] {
     color: #ffffff;
 }
 ul#top {height: 51px; text-align: center}
-#top>li {margin: 20px 15px; text-transform: uppercase;padding-top: 2px; border-bottom: 2px solid #fff}
-#top>li:hover {padding-top: 2px; border-bottom: 2px solid #222222}
+#top>li {/*margin: 20px 15px; padding-top: 2px;border-bottom: 2px solid #fff;*/margin: 0 15px; padding: 20px 0;  text-transform: uppercase; position: relative}
+#top>li>a:hover {/*text-decoration: underline;*/border-bottom: 2px solid #222222}
+/*Mega-menu*/
+.mega-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    padding:  21px 21px 20px 25px;
+    display: none;
+    text-transform:none;
+   text-align: left;
+    z-index: 2;
+top:55px}
+.mega-box::before {
+    content:"";
+    width: 12px;
+    height: 12px;
+    background-color:#fff;
+    position: absolute;
+    transform:rotate(45deg);
+    top:-7px;
+    border-left:1px solid #e8e8e8; 
+    border-top: 1px solid #e8e8e8;
+}
+li.menu-item.last>div.mega-box {right:0}
+li.menu-item.last>div.mega-box::before {right: 30px}
+li.menu-item:hover>.mega-box {display:flex}
+
+.mega-item-box:first-of-type {
+    margin-right: 45px;
+}
+.mega-item-box:nth-of-type(2) {margin-right:26px}
+.mega-item-box:last-of-type>h3, .mega-item-box:last-of-type>.line, .mega-item-box:last-of-type>ul {margin-left:17px}
+.mega-item-box>* {
+    font-size: 14px;font-weight: 400;letter-spacing: 0.025em;
+}
+.mega-item-box h3 {
+    line-height: 32px;text-transform: uppercase;color: #232323;
+    /*margin: 8px 0 16px 0;*/
+}
+.mega-item-box>.line {margin: 8px 0 16px;width: 235px;height: 1px;background-color: #e8e8e8;}
+.mega-item-box li {
+    line-height: 28px;color: #646464;
+}
+.mega-item-box a {DISPLAY: BLOCK}
+#super-sale {
+    margin-top: 22px;
+    max-width: 255px;
+    height: 118px;
+    background-image: url("img/mega-box-photo.jpg");
+    background-position: left;
+    padding: 61px 0 0 164px;
+    font-size: 22px;line-height: 28px;font-weight: 900;text-transform: uppercase;letter-spacing: 0.025em;color: #ffffff;
+}
 /*The brand lux-fashion*/
 div#lux-fashion {
     height: 613px;
