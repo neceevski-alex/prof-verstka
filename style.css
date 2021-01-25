@@ -245,6 +245,7 @@ li.menu-item:hover>.mega-box {display:flex}
     line-height: 28px;color: #646464;
 }
 .mega-item-box a {DISPLAY: BLOCK}
+.mega-item-box a:hover {color: #f16d7f}
 #super-sale {
     margin-top: 22px;
     max-width: 255px;
@@ -270,7 +271,7 @@ div#lux-fashion>div {
 }
 /*div#offerts styling*/
 div#offerts {margin-bottom: 100px;padding: 0 218px;}
-
+div#offerts * {box-sizing:content-box}
 div#offerts>div>div {position: relative;}
 div#offerts div.left div.up {margin: 0 10px 10px 0}
 div#offerts div.left div.down {margin: 10px 10px 0 0}
@@ -295,7 +296,7 @@ padding: 16px 20px 0 19px;
 }
 /*!div#offerts styling*/
 /*fetured items styling*/
-#fetured-items>h2, #fetured-items>h5 {
+#fetured-items h2, #fetured-items h5 {
     text-align: center;
 }
 #fetured-items div.items {
@@ -375,6 +376,7 @@ background-color: #f16d7f;
     
     font-size: 14px;line-height: 24px;font-weight: 300;letter-spacing: 0.025em;
 }
+footer nav li a:hover {color:#f16d7f}
 #subsribe {
     background-image: url(img/subscribe-bkgd.png);
     height: 438px;
