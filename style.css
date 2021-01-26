@@ -163,7 +163,7 @@ li.dropdown-item {
     top: 15px;
 }*/
 header>div>* {display: inline-block; vertical-align: bottom; }
-#browse {
+#logo #browse {
 /*    background-image: url("img/browse-bkgd.jpg");*/
     width: 87px;height: 38px;border-radius: 3px 0px 0px 3px;
     /*background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);*/
@@ -173,11 +173,12 @@ header>div>* {display: inline-block; vertical-align: bottom; }
     /*color: #222222;
     background-color: #cdcdcc; border: 1px solid #e6e6e6;*/
 }
+form#search {padding-bottom: 2px}
 form#search>input{display: inline-block;vertical-align: bottom}
 form#search>input[name="term"] {width:280px; height: 38px; padding-left: 5px; font-size:14px;}
 form#search>input[type="image"] {
     border: 1px solid black;
-    height: 36px
+    height: 38px
 }
 #account img, #account #count {
     display: inline-block;
@@ -193,11 +194,37 @@ form#search>input[type="image"] {
     border-radius: 9px;
 }
 #account #myac {
-    background-image: url("img/myac-bkgd.jpg");
-    margin: 31px 0 0 17px;
-    padding: 13px 12px 11px 19px;
-    color: #ffffff;
+    width: 130px;height: 38px;border-radius: 3px 0px 0px 3px;
+    font-size: 14px;
+    font-weight: 300;letter-spacing: 0.025em;
+    padding-left: 14px;
+    margin: 39px 0 0 17px;
+/*    padding: 13px 12px 11px 19px;*/
 }
+#account #myac:hover {background-color:#f16f7d; color: #fff}
+/*Cart styling*/
+#account .dropdown-menu {padding:20px 18px; background-color: #ffffff;border-radius: 5px;}
+#account .dropdown-menu>.purchase {display: table-row;height: 120px;}
+#account .dropdown-menu>.purchase>div {display: table-cell;}
+.purchase-descr {font-size: 12px;line-height: 1.2;text-transform: uppercase;vertical-align: top; padding: 3px 0 0 15px;}
+
+.purchase-descr .name {font-weight: 700;  width: 120px;}
+.purchase-descr .rating {margin:10px 0}
+.purchase-descr .rating i {font-weight: 400; color: #e4af48;
+}
+.purchase-descr .count-price {font-weight: 300; 
+}
+.purchase-descr .count-price span {letter-spacing: 6px; text-align: center}
+.purchase>.delete {font-size: 16px; font-weight: 400; color: #c0c0c0;vertical-align: middle; text-align: right;
+}
+.total {display: table-row; font-size: 16px;font-weight: 700; height: 36px; 
+}
+.total div {display: table-cell; vertical-align: top;
+}
+.total div:last-child {text-align: right}
+.block-href{display:block; width: 100%; text-align: center; font-size: 12px; font-weight: 700; height: 50px; line-height: 50px; margin-top: 20px; border: 1px solid #222; border-radius: 3px;}
+.block-href:hover {border-color: #f16d7f;color: #f16d7f }
+/*Cart styling*/
 ul#top {height: 51px; text-align: center}
 #top>li {/*margin: 20px 15px; padding-top: 2px;border-bottom: 2px solid #fff;*/margin: 0 15px; padding: 20px 0;  text-transform: uppercase; position: relative}
 #top>li>a:hover {/*text-decoration: underline;*/border-bottom: 2px solid #222222}
@@ -328,22 +355,26 @@ padding: 16px 20px 0 19px;
     position: relative;
     top: 6px;
 }*/
-.name,.price {
+#fetured-items .items .name,.price {
     margin: 18px 0 0 14px;
 }
-.name {
+#fetured-items .items .name {
     font-size: 13px;line-height: 1.2;font-weight: 400;text-transform: uppercase;color: #222222;
 }
-.price {
+#fetured-items .items .price {
     font-size: 16px;line-height: 1.2;font-weight: 700;text-transform: uppercase;color: #f16d7f;
 }
 #browse-all {
     width: 212px;
 height: 48px;
-background-color: #f16d7f;
+background-color: #ccc;
     margin: 80px auto 115px;
-    font-size: 16px;line-height: 48px;font-weight: 700;letter-spacing: 0.025em;color: #ffffff;
+    font-size: 16px;line-height: 48px;font-weight: 700;letter-spacing: 0.025em;color: #222;
     text-align: center;
+}
+#browse-all:hover>*, #browse-all:hover {
+    background-color: #f16d7f;
+    color: #fff;
 }
 #offer-for-woman {margin-bottom: 100px; min-height: 529px; padding: 0 218px;}
 /*#offer-for-woman>div>div {display:inline-block;}*/
@@ -422,3 +453,6 @@ color: #898989;}
 #socicons a i {color: #b2b2b2;}
 #socicons a:hover {background-color: #f16d7f;}
 #socicons a:hover i {color: #ffffff; }
+.rating-1 {
+    
+}
