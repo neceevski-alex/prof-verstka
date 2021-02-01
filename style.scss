@@ -291,7 +291,8 @@ li.menu-item:hover>.mega-box {display:flex}
 .mega-item-box a {DISPLAY: BLOCK}
 .mega-item-box a:hover {color: $colorRed}
 /*! megas menu*/
-/*Page mame and breadcrumbs*/
+/*Page name and breadcrumbs*/
+section.main-content {margin-bottom:90px}
 section.main-content>header{
     height: 148px;background-color: #f8f3f4;display:flex;
     div {width: 50%;line-height: 148px;text-transform: uppercase;}
@@ -450,6 +451,7 @@ background-color: #ccc;
 /*!Front page styles*/
 /*Checkout page*/
 .main-content__chapter {
+    @extend .string;
     border-bottom: 1px solid darken($colorLight, 2%);
 }
 article.main-content__chapter>header {
@@ -471,10 +473,11 @@ article.main-content__chapter .main-content__subscr_light {color:darken($colorLi
 }
 .main-content__form input[type="submit"]{
 	display: block;
-	margin-left: 20px;
+	// margin-left: 20px;
 	padding: 20px 55px;
 }
 .main-content__form input[type="submit"]:hover{background-color: $colorRed; color:$colorLight}
+.main-content__forgot-pwd {display:inline-block; padding: 20px 55px;}
 /*!Checkout page*/
 footer nav li a:hover {color:$colorRed}
 #subsribe {
