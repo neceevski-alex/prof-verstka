@@ -639,16 +639,44 @@ div#offerts div.left div.up {
   margin: 0 10px 10px 0;
 }
 
+div#offerts div.left div.up:hover {
+  -webkit-transform: translate(-94px, -102px) scale(1.3);
+  transform: translate(-94px, -102px) scale(1.3);
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+  box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+}
+
 div#offerts div.left div.down {
   margin: 10px 10px 0 0;
+}
+
+div#offerts div.left div.down:hover {
+  -webkit-transform: translate(-94px, -102px) scale(1.3);
+  transform: translate(-94px, -102px) scale(1.3);
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+  box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
 }
 
 div#offerts div.right div.up {
   margin: 0 0 10px 10px;
 }
 
+div#offerts div.right div.up:hover {
+  -webkit-transform: translate(-94px, -102px) scale(1.3);
+  transform: translate(-94px, -102px) scale(1.3);
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+  box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+}
+
 div#offerts div.right div.down {
   margin: 10px 0 0 10px;
+}
+
+div#offerts div.right div.down:hover {
+  -webkit-transform: translate(-94px, -102px) scale(1.3);
+  transform: translate(-94px, -102px) scale(1.3);
+  -webkit-box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+  box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
 }
 
 @media screen and (max-device-width: 1599px) {
