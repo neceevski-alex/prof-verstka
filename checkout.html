@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>main-emag</title>
+    <title>checkout-emag</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet"> 
 </head>
-<body class="front">
+<body class="not-front checkout">
     <div class="container">
         <div class="main">
             <header class="string flex-container between general">
@@ -427,192 +427,132 @@
                         </div></li>
                 </ul>
             </nav>
-            <div id="lux-fashion" class="string"><div style="font-size: 60px;">THE BRAND</div><div style="font-size: 40px;">OF LUXERIOUS <span style="color: #f16d7f">FASHION</span></div></div>
-            <div id="offerts" class="string flex-container around">
-                <div class="left">
-                    <div class="up">
-                        <a href="#"><img src="img/gal1_1.png" alt="man"></a>
-                        <a href="#" class="text_offert">hOT dEAL<br><SPAN>FOR MEN</SPAN></a>
+            <section class="main-content">
+                <header class="string">
+                    <div class="main-content__page-name">New arrival</div>
+                    <div class="main-content__breadcrumbs">
+                        <span>Home</span>/
+                        <span>Men</span>/
+                        <span>New arrival</span>
                     </div>
-                    <div class="down">
-                        <a href=""><img src="img/gal1_3.png" alt="think"></a>
-                        <a href=""class="text_offert">LUXIROUS & trendy<br><span>ACCESORIES</span></a>
-                    </div>
-                </div>
-                <div  class="right">
-                      <div class="up">
-                        <a href=""><img src="img/gal1_2.png" alt="woman"></a>
-                        <a href="" class="text_offert">30% offer<br><span>women</span></a>
-                    </div>
-                    <div class="down">
-                        <a href=""><img src="img/gal1_4.png" alt="kinder"></a>
-                        <a href="" class="text_offert">new arrivals<br><span>FOR kids</span></a>
-                    </div>
-                </div>
-            </div>
-            <section><div id="fetured-items" class="string">
-                <header>
-                    <h2>Fetured Items</h2>
                 </header>
-                <h5>Shop for items based on what we featured in this week</h5>
-                <div class="flex-container around">
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_1.png" alt=""></div>
+                <article class="main-content__chapter">
+                    <header>01. Shipping Adress</header>
+                    <div>
+                        <form action="" class="main-content__form">
+                            <header clas="main-content__head" >CHECK AS A GUEST OR REGISTER</header>
+                            <div style="margin-top:15px;" class="main-content__subscr_light">Register with us for future convenience</div>
+                            <input style="margin:30px 0 0 34px" type="radio" name="mode"> CHECKOUT AS GUEST<br>
+                            <input style="margin:17px 0 0 34px;" type="radio" name="mode" checked> REGISTER<br>
+                            <div style="margin-top:35px;">REGISTER AND SAVE TIME</div>
+                            <div style="margin-top:15px;" class="main-content__subscr_light">Register with us for future convenience</div>
+                            <div style="margin-top:35px;" class="main-content__subscr_light"><i class="fa fa-angle-double-right"></i> Fast and easy checkout</div>
+                            <div style="margin-top: 15px; margin-bottom: 35px;" class="main-content__subscr_light"><i class="fa fa-angle-double-right"></i> Easy access to your order history and status</div>
+                            <input type="submit" value="CONTINUE">
+                        </form>
+                        <form action="" class="main-content__form">
+                            <header clas="main-content__head" >ALREADY REGISTER?</header>
+                            <div style="margin-top:15px;" class="main-content__subscr_light">Please log in below</div>
+                            <div class="main-content__label">EMAIL ADDRESS<em style="color:#ff0d0d">*</em></div>
+                            <input type="email" required>
+                            <div class="main-content__label">PASSWORD <em style="color: #ff0d0d">*</em></div>
+                            <input type="password" required>
+                            <div style="color:#ff0d0d; margin:30px 0 38px 34px" >* Required Fileds</div>
+
                             
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            <input type="submit" value="LOC IN">
+                        </form>
                     </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_2.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                </article>
+                <article class="main-content__chapter">
+                    <header>02. BILLING INFORMATION</header>
+                </article>
+                <article class="main-content__chapter">
+                    <header>03.  SHIPPING INFORMATION</header>
+                </article>
+                <article class="main-content__chapter">
+                    <header>04.  SHIPPING METHOD</header>
+                </article>
+                <article class="main-content__chapter">
+                    <header>05.  PAYMENT METHOD</header>
+                </article>
+                <article class="main-content__chapter">
+                    <header>06.  ORDER REVIEW</header>
+                </article>
+            </section>
+            <footer>
+                <div id="subsribe" class="string">
+                   <div class="flex-container around">
+                    <div id="burhan">
+                        <img src="img/portrait.png" alt="portrait"><div><div style="margin-bottom:16px">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</div><div style="margin: 20px 0 40px"><span style="font-weight:700; font-style: normal;color:#f16d7f">Bin Burhan</span><span style="font-size: 12px;line-height: 14px;font-weight: 300;font-style: normal"><br>Dhake, Bd</span></div><img src="img/gray-rect-small-1.jpg" alt="cdv"><img src="img/rose_rect_small.jpg" alt="cdv" style='display: inline-block; margin: 0 13px'><img src="img/gray-rect-small-1.jpg" alt="cdv"></div>
                     </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_3.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
-                    </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_4.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
-                    </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_5.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
-                    </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_6.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
-                    </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_7.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
-                    </div>
-                    <div class="items">
-                        <a href="2.html" class="prod-link">
-                            <div class="image"><img src="img/gal2_8.png" alt=""></div>
-                            
-                            <div class="name">Mango People T-shirt</div>
-                            <div class="price">$52.00</div>
-                        </a>
-                        <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                    <form action="subscr.php">
+                        <div style="text-align: center; margin-bottom: 35px "><span style="font-family: Lato;font-size: 24px;line-height: 54px;font-weight: 400;">SUBSCRIBE</span><br>FOR OUR NEWLETTER AND PROMOTION</div>
+                       <input type="email" required placeholder="Enter Your Email"><input type="submit" value="Subsribe">
+                    </form>
                     </div>
                 </div>
-                <a href=""><div id="browse-all">Browse All Product <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                    </div></a>
-            </div></section>
-            <div id="offer-for-woman" class="string"><div class="flex-container around"><div id="picture"><div>30% <span style="color: #f16d7f">OFFER</span><br><span style="font-size: 32.2px">FOR WOMEN</span></div></div><div id="offer-text"><UL><LI style="list-style-image:url(img/free-deilivery.png)"><H3>FRee delivery</H3>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</LI>
-                        <LI style="list-style-image:url(img/sales-discount.png)"><h3>Sales &amp; discounts</h3>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</LI>
-                        <LI style="list-style-image:url(img/quality_assurance.png)"><h3>Quality assurance</h3>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</LI>
-                    </UL>
-                </div></div>
-            </div>
-            
+                <div id="bottom-menu" class="string">
+                    <div class="flex-container around" style="align-items: start">
+                        <div style="width: 430px">
+                            <div style="margin-bottom:30px"><a href="#"><img src="img/logo.jpg" alt="logo">&nbsp;<span > BRAN<span style="font-weight: 900;color: #f16d7f;">D</span></span></a></div>
+                            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p><p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                        </div>
+                        <div>
+                            <H4 class="rose">COMPANY</H4>
+                            <nav>
+                            <ul class="menu">
+                                <li class="menu-item"><a href="">Home</a> </li>
+                                <li class="menu-item"><a href="">Shop</a></li>
+                                <li class="menu-item"><a href="">About</a></li>
+                                <li class="menu-item"><a href="">How It Works</a></li>
+                                <li class="menu-item"><a href="">Contact</a></li>
+                            </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <h4 class="rose">INFORMATION</h4>
+                            <nav>
+                            <ul class="menu">
+                                <li class="menu-item"><a href="">Tearms &amp; Conditio</a></li>
+                                <li class="menu-item"><a href="">Privacy Policy</a></li>
+                                <li class="menu-item"><a href="">How to Buy</a></li>
+                                <li class="menu-item"><a href="">How to Sell</a></li>
+                                <li class="menu-item"><a href="">Promotion</a></li>
+                            </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <h4 class="rose">SHOP CATEGORY</h4>
+                            <nav>
+                            <ul class="menu">
+                                <li class="menu-item"><a href="">Men</a></li>
+                                <li class="menu-item"><a href="">Women</a></li>
+                                <li class="menu-item"><a href="">Child</a></li>
+                                <li class="menu-item"><a href="">Apparel</a></li>
+                                <li class="menu-item"><a href="">Brows All</a></li>
+                            </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="copyright-socicons" class="string">
+                    <div class="flex-container between">
+                        <div style="font-size: 16px;line-height: 42px;font-weight: 400;letter-spacing: 0.025em;color: #7a7a7a;">
+                            &copy;2017 Brand All Rights Reserved.
+                        </div>
+                        <div id="socicons">
+                            <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+                            <a href="" target="_blank"><i class="fa fa-google-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        
-        <footer>
-            <div id="subsribe" class="string">
-               <div class="flex-container around">
-                <div id="burhan">
-                    <img src="img/portrait.png" alt="portrait"><div><div style="margin-bottom:16px">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</div><div style="margin: 20px 0 40px"><span style="font-weight:700; font-style: normal;color:#f16d7f">Bin Burhan</span><span style="font-size: 12px;line-height: 14px;font-weight: 300;font-style: normal"><br>Dhake, Bd</span></div><img src="img/gray-rect-small-1.jpg" alt="cdv"><img src="img/rose_rect_small.jpg" alt="cdv" style='display: inline-block; margin: 0 13px'><img src="img/gray-rect-small-1.jpg" alt="cdv"></div>
-                </div>
-                <form action="subscr.php">
-                    <div style="text-align: center; margin-bottom: 35px "><span style="font-family: Lato;font-size: 24px;line-height: 54px;font-weight: 400;">SUBSCRIBE</span><br>FOR OUR NEWLETTER AND PROMOTION</div>
-                   <input type="email" required placeholder="Enter Your Email"><input type="submit" value="Subsribe">
-                </form>
-                </div>
-            </div>
-            <div id="bottom-menu" class="string">
-                <div class="flex-container around" style="align-items: start">
-                    <div style="width: 430px">
-                        <div style="margin-bottom:30px"><a href="#"><img src="img/logo.jpg" alt="logo">&nbsp;<span > BRAN<span style="font-weight: 900;color: #f16d7f;">D</span></span></a></div>
-                        <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p><p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
-                    </div>
-                    <div>
-                        <H4 class="rose">COMPANY</H4>
-                        <nav>
-                        <ul class="menu">
-                            <li class="menu-item"><a href="">Home</a> </li>
-                            <li class="menu-item"><a href="">Shop</a></li>
-                            <li class="menu-item"><a href="">About</a></li>
-                            <li class="menu-item"><a href="">How It Works</a></li>
-                            <li class="menu-item"><a href="">Contact</a></li>
-                        </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <h4 class="rose">INFORMATION</h4>
-                        <nav>
-                        <ul class="menu">
-                            <li class="menu-item"><a href="">Tearms &amp; Conditio</a></li>
-                            <li class="menu-item"><a href="">Privacy Policy</a></li>
-                            <li class="menu-item"><a href="">How to Buy</a></li>
-                            <li class="menu-item"><a href="">How to Sell</a></li>
-                            <li class="menu-item"><a href="">Promotion</a></li>
-                        </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <h4 class="rose">SHOP CATEGORY</h4>
-                        <nav>
-                        <ul class="menu">
-                            <li class="menu-item"><a href="">Men</a></li>
-                            <li class="menu-item"><a href="">Women</a></li>
-                            <li class="menu-item"><a href="">Child</a></li>
-                            <li class="menu-item"><a href="">Apparel</a></li>
-                            <li class="menu-item"><a href="">Brows All</a></li>
-                        </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <div id="copyright-socicons" class="string">
-                <div class="flex-container between">
-                    <div style="font-size: 16px;line-height: 42px;font-weight: 400;letter-spacing: 0.025em;color: #7a7a7a;">
-                        &copy;2017 Brand All Rights Reserved.
-                    </div>
-                    <div id="socicons">
-                        <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
-                        <a href="" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-</body>
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    

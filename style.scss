@@ -1,7 +1,12 @@
-$colorRed: #f16d7f;
+$colorRed: rgb(241, 109, 127);
 $colorMain: #ffffff;
 $colorDark: #222222;
 $colorLight: #ececec;
+@mixin br($bor-rad) {
+    border-radius: $bor-rad;
+    -webkit-border-radius: $bor-rad;
+    -moz-border-radius: $bor-rad
+}
 html,body {
     height: 100%
 }
@@ -11,7 +16,7 @@ h2 {
 h3 {font-size: 20px;line-height: 1.2;font-weight: 700;letter-spacing: 0.025em;}
 h4 {font-size: 18px;line-height: 26px;font-weight: 700;letter-spacing: 0.025em;}
 h5 {
-    
+font-size:14px;    
 line-height: 54px;
 font-weight: 400;
 letter-spacing: 0.025em;
@@ -112,7 +117,7 @@ a:link, a:hover, a:active, a:focus, a:visited {
 }
 .between {justify-content: space-between;}
 /*Header*/
-header>div{
+header.general>div{
     height: 100px;
     
 }
@@ -164,7 +169,7 @@ li.dropdown-item {
     position: relative;
     top: 15px;
 }*/
-header>div>* {display: inline-block; vertical-align: bottom; }
+header.general>div>* {display: inline-block; vertical-align: bottom; }
 #logo #browse {
 /*    background-image: url("img/browse-bkgd.jpg");*/
     width: 87px;height: 38px;border-radius: 3px 0px 0px 3px;
@@ -193,7 +198,7 @@ form#search>input[type="image"] {
     width: 19px;height: 19px;background-color:$colorRed;
     font-size: 12px;line-height: 19px;font-weight: 700; color: $colorMain;
     text-align: center;
-    border-radius: 9px;
+    @include br(9px);
 }
 #account #myac {
     width: 130px;height: 38px;border-radius: 3px 0px 0px 3px;
@@ -203,12 +208,20 @@ form#search>input[type="image"] {
     margin: 39px 0 0 17px;
 /*    padding: 13px 12px 11px 19px;*/
 }
-#account #myac:hover {background-color: $colorRed; color: $colorMain}
+.livecart {position: relative;height: 40px;}
+.livecart>a{display: inline-block; margin-top: 3px}
+.livecart>.mega-box {top:35px}
+.livecart>.mega-box::before {left:13px}
+.livecart:hover>.mega-box {display:block}
+#account {
+    #myac:hover {background-color: $colorRed; color: $colorMain}
+    #myac:hover>*{background-color: $colorRed; color: $colorMain}
+}
 /*Cart styling*/
 
-#account .dropdown-menu {padding:20px 18px; background-color: $colorMain;border-radius: 5px; right: 40px;}
-#account .dropdown-menu>.purchase {display: table-row;height: 120px;}
-#account .dropdown-menu>.purchase>div {display: table-cell;}
+/* acco#unt .livecart {padding:20px 18px; background-color: $colorMain;border-radius: 5px; right: 40px;} */
+#account .mega-box>.purchase {display: table-row;height: 120px;}
+#account .mega-box>.purchase>div {display: table-cell;}
 .purchase-descr {font-size: 12px;line-height: 1.2;text-transform: uppercase;vertical-align: top; padding: 3px 0 0 15px;}
 
 .purchase-descr .name {font-weight: 700;  width: 120px;}
@@ -226,16 +239,16 @@ form#search>input[type="image"] {
 .total div {display: table-cell; vertical-align: top;
 }
 .total div:last-child {text-align: right}
-.block-href{display:block; width: 100%; text-align: center; font-size: 12px; font-weight: 700; height: 50px; line-height: 50px; margin-top: 20px; border: 1px solid #222; border-radius: 3px;}
+.block-href{display:block; width: 100%; text-align: center; font-size: 12px; font-weight: 700; height: 50px; line-height: 50px; margin-top: 20px; border: 1px solid #222; @include br(3px);}
 .block-href:hover {border-color:$colorRed; color: $colorRed }
 /*Cart styling*/
 ul#top {height: 51px; text-align: center}
 #top>li {/*margin: 20px 15px; padding-top: 2px;border-bottom: 2px solid #fff;*/margin: 0 15px; padding: 20px 0;  text-transform: uppercase; position: relative}
-#top>li>a:hover {/*text-decoration: underline;*/border-bottom: 2px solid $colorDark}
+#top>li>a:hover {/*text-decoration: underline;*/border-bottom: 2px solid $colorRed}
 /*Mega-menu*/
 .mega-box {
     background-color: $colorMain;
-    border-radius: 5px;
+    @include br(5px);
     border: 1px solid darken($colorMain, 9%);
     position: absolute;
     padding:  21px 21px 20px 25px;
@@ -277,6 +290,21 @@ li.menu-item:hover>.mega-box {display:flex}
 }
 .mega-item-box a {DISPLAY: BLOCK}
 .mega-item-box a:hover {color: $colorRed}
+/*! megas menu*/
+/*Page mame and breadcrumbs*/
+section.main-content>header{
+    height: 148px;background-color: #f8f3f4;display:flex;
+    div {width: 50%;line-height: 148px;text-transform: uppercase;}
+    .main-content__page-name {
+        font-size: 24px;font-weight: 900;color: $colorRed;
+    }
+    .main-content__breadcrumbs {
+        font-size: 14px;font-weight: 300;color: lighten($colorDark, 26%); text-align: right;
+        span:last-of-type {color: $colorRed;font-weight: 700;}
+    }
+}
+/*!Page mame and breadcrumbs*/
+/*Front page styles*/
 #super-sale {
     margin-top: 22px;
     max-width: 255px;
@@ -337,6 +365,12 @@ padding: 16px 20px 0 19px;
     margin-top: 60px;
     overflow-x: hidden;
     position: relative;
+    padding-bottom: 10px;
+}
+#fetured-items div.items:hover{
+    -webkit-box-shadow: -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+    -moz-box-shadow:    -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
+    box-shadow:         -1px 0px 21px 0px rgba(241, 109, 127, 0.75);
 }
 #fetured-items .items>.prod-link {display:block}
 #fetured-items .items .prod-back {
@@ -413,6 +447,35 @@ background-color: #ccc;
     
     font-size: 14px;line-height: 24px;font-weight: 300;letter-spacing: 0.025em;
 }
+/*!Front page styles*/
+/*Checkout page*/
+.main-content__chapter {
+    border-bottom: 1px solid darken($colorLight, 2%);
+}
+article.main-content__chapter>header {
+    font-size: 16px;line-height: 72px;font-weight: 700;text-transform: uppercase;
+    height: 72px;
+}
+article.main-content__chapter form>* {font-size:13px;
+    margin-left:35px;
+    font-weight:400;
+    color:$colorDark;
+}
+article.main-content__chapter>div {display: flex;}
+article.main-content__chapter .main-content__form {width: 50%;}
+article.main-content__chapter .main-content__subscr_light {color:darken($colorLight, 23%);}
+.main-content__form {margin-bottom: 80px;}
+.main-content__label {display: block; margin:25px 0 15px 0}
+.main-content__form input[type="email"], .main-content__form input[type="password"] {
+    width: 390px;height: 45px;background-color: #ffffff;border: 1px solid darken($colorLight, 1%);
+}
+.main-content__form input[type="submit"]{
+	display: block;
+	margin-left: 20px;
+	padding: 20px 55px;
+}
+.main-content__form input[type="submit"]:hover{background-color: $colorRed; color:$colorLight}
+/*!Checkout page*/
 footer nav li a:hover {color:$colorRed}
 #subsribe {
     background-image: url(img/subscribe-bkgd.png);
