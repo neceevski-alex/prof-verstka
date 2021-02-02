@@ -89,19 +89,19 @@ footer {
 }
 
 /*!footer fixation-5*/
-.string, .main-content__chapter {
+.string, body.checkout .main-content__chapter {
   padding: 0 230px;
   /* margin: 50px 0;*/
 }
 
 @media screen and (max-device-width: 960px) {
-  .string, .main-content__chapter {
+  .string, body.checkout .main-content__chapter {
     padding: 0 120px;
   }
 }
 
 @media screen and (max-device-width: 740px) {
-  .string, .main-content__chapter {
+  .string, body.checkout .main-content__chapter {
     padding: 0 30px;
   }
 }
@@ -680,8 +680,8 @@ div#offerts div.right div.down:hover {
 }
 
 div#offerts div div {
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1s .2s;
+  transition: all 1s .2s;
 }
 
 @media screen and (max-device-width: 1599px) {
@@ -869,11 +869,11 @@ a.text_offert {
 
 /*!Front page styles*/
 /*Checkout page*/
-.main-content__chapter {
+body.checkout .main-content__chapter {
   border-bottom: 1px solid #e7e7e7;
 }
 
-article.main-content__chapter > header {
+body.checkout article.main-content__chapter > header {
   font-size: 16px;
   line-height: 72px;
   font-weight: 700;
@@ -881,59 +881,130 @@ article.main-content__chapter > header {
   height: 72px;
 }
 
-article.main-content__chapter form > * {
+body.checkout article.main-content__chapter form > * {
   font-size: 13px;
   margin-left: 35px;
   font-weight: 400;
   color: #222222;
 }
 
-article.main-content__chapter > div {
+body.checkout article.main-content__chapter > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-article.main-content__chapter .main-content__form {
+body.checkout article.main-content__chapter .main-content__form {
   width: 50%;
 }
 
-article.main-content__chapter .main-content__subscr_light {
+body.checkout article.main-content__chapter .main-content__subscr_light {
   color: #b1b1b1;
 }
 
-.main-content__form {
+body.checkout .main-content__form {
   margin-bottom: 80px;
 }
 
-.main-content__label {
+body.checkout .main-content__label {
   display: block;
   margin: 25px 0 15px 0;
 }
 
-.main-content__form input[type="email"], .main-content__form input[type="password"] {
+body.checkout .main-content__form input[type="email"], body.checkout .main-content__form input[type="password"] {
   width: 390px;
   height: 45px;
   background-color: #ffffff;
   border: 1px solid #e9e9e9;
 }
 
-.main-content__form input[type="submit"] {
+body.checkout .main-content__form input[type="submit"] {
   display: block;
   padding: 20px 55px;
 }
 
-.main-content__form input[type="submit"]:hover {
+body.checkout .main-content__form input[type="submit"]:hover {
   background-color: #f16d7f;
   color: #ececec;
 }
 
-.main-content__forgot-pwd {
+body.checkout .main-content__forgot-pwd {
   display: inline-block;
   padding: 20px 55px;
 }
 
 /*!Checkout page*/
+/*Shoppingcart page*/
+body.shoppingcart table {
+  margin-top: 90px;
+  font-size: 13px;
+  width: 100%;
+}
+
+body.shoppingcart th {
+  height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  color: #222222;
+}
+
+body.shoppingcart td {
+  height: 150px;
+}
+
+body.shoppingcart tr {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+body.shoppingcart tr, body.shoppingcart td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+body.shoppingcart td > a > div {
+  display: inline-block;
+  text-align: left;
+}
+
+body.shoppingcart .descript {
+  text-align: left;
+}
+
+body.shoppingcart .descript .image {
+  width: 100px;
+  height: 115px;
+  margin-right: 15px;
+}
+
+body.shoppingcart .descript div.name {
+  line-height: 3.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+body.shoppingcart .descript div.property * {
+  line-height: 20px;
+}
+
+body.shoppingcart .descript div.property > .name {
+  font-weight: 400;
+  text-align: left;
+  color: #585858;
+}
+
+body.shoppingcart .descript div.property > .value {
+  font-weight: 300;
+  text-align: right;
+  color: #6f6f6f;
+}
+
+body.shoppingcart .descript span {
+  width: 50%;
+}
+
+/*!Shoppingcart page*/
 footer nav li a:hover {
   color: #f16d7f;
 }
