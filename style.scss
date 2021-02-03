@@ -529,7 +529,22 @@ body.shoppingcart {
         div.property>.value {font-weight: 300;text-align:right; color: lighten($colorDark, 30%);}
         span{width: 50%}
     }
-
+    div.buttons a {
+        display: block;
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 50px;
+        height: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: lighten($colorDark, 16%);
+        border: 1px solid darken($colorLight, 1%);
+        text-align: center;
+        {
+            a.clear {width: 235px}
+            a.continue {width:225px}
+        }
+    }
 }
 /*!Shoppingcart page*/
 footer nav li a:hover {color:$colorRed}
