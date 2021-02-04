@@ -873,7 +873,7 @@ body.checkout .main-content__chapter {
   border-bottom: 1px solid #e7e7e7;
 }
 
-body.checkout article.main-content__chapter > header {
+body.checkout .accordion > .accordion-item > h2.accordion-header > button.accordion-button.collapsed {
   font-size: 16px;
   line-height: 72px;
   font-weight: 700;
@@ -881,24 +881,24 @@ body.checkout article.main-content__chapter > header {
   height: 72px;
 }
 
-body.checkout article.main-content__chapter form > * {
+body.checkout div.accordion > div.accordion-item > div.accordion-collapse.collapse > div.accordion-body form > * {
   font-size: 13px;
   margin-left: 35px;
   font-weight: 400;
   color: #222222;
 }
 
-body.checkout article.main-content__chapter > div {
+body.checkout div.accordion > div.accordion-item > div.accordion-collapse.collapse > div.accordion-body > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-body.checkout article.main-content__chapter .main-content__form {
+body.checkout div.accordion > div.accordion-item > div.accordion-collapse.collapse > div.accordion-body .main-content__form {
   width: 50%;
 }
 
-body.checkout article.main-content__chapter .main-content__subscr_light {
+body.checkout div.accordion > div.accordion-item > div.accordion-collapse.collapse > div.accordion-body .main-content__subscr_light {
   color: #b1b1b1;
 }
 
