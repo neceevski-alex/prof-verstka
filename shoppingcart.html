@@ -493,8 +493,35 @@
                     </table>
                     <div class="buttons flex-container between">
                         <a class="clear" href="">cLEAR SHOPPING CART</a>
-                        <a class="continue" href="">cLEAR SHOPPING CART</a>
+                        <a class="continue" href="">cONTINUE sHOPPING</a>
                     </div>
+                    <form action="" class="flex-container between" style="align-items:start">
+                        <fieldset>
+                            <legend>Shiiping address</legend>
+                            <select id="country">
+                                <option selected value="BGD">Bangladesh</option>
+                                <option value="IRN">Iran</option>
+                                <option value="RUS">Russia</option>   
+                            </select>
+                            <input id="state" placeholder="State" type="text">
+                            <input id="postcode" placeholder="Postcode/Zip" type="text">
+                            <input id="quote" type="button" value="get a qoute">
+                        </fieldset>
+                        <fieldset>
+                            <legend>couopon discount</legend>
+                            <label for="coupon">Enter your coupon code if you have one</label>
+                            <input id="coupon" placeholder="coupon code" type="text">
+                            <input id="coupon" type="button" value="apply coupon">
+                        </fieldset>
+                        <fieldset class="total">
+                            <div class="subtotal">Subtotal&nbsp;$900</div>
+                            <div class="grandtotal">
+                                grandtotall&nbsp;<span>$900</span>
+                            </div>
+                            <div style="height: 1px; background-color: #e2e2e2; margin-bottom: 17px;"></div>
+                            <input type="submit" value="proceed to checkout"> 
+                        </fieldset>
+                    </form>
                 </article>
             </section>
             <footer>

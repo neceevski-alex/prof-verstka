@@ -404,19 +404,19 @@ form#search > input[type="image"] {
   text-align: right;
 }
 
-.total {
+div.total {
   display: table-row;
   font-size: 16px;
   font-weight: 700;
   height: 36px;
 }
 
-.total div {
+div.total div {
   display: table-cell;
   vertical-align: top;
 }
 
-.total div:last-child {
+div.total div:last-child {
   text-align: right;
 }
 
@@ -950,7 +950,7 @@ body.shoppingcart th {
 }
 
 body.shoppingcart td {
-  height: 150px;
+  height: 165px;
 }
 
 body.shoppingcart tr {
@@ -978,7 +978,7 @@ body.shoppingcart .descript .image {
 }
 
 body.shoppingcart .descript div.name {
-  line-height: 3.2;
+  line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
   color: #222222;
@@ -1002,6 +1002,134 @@ body.shoppingcart .descript div.property > .value {
 
 body.shoppingcart .descript span {
   width: 50%;
+}
+
+body.shoppingcart div.buttons {
+  margin: 40px 0 60px;
+}
+
+body.shoppingcart div.buttons a {
+  display: block;
+  font-family: Lato;
+  font-size: 14px;
+  line-height: 50px;
+  height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4b4b4b;
+  border: 1px solid #e9e9e9;
+  text-align: center;
+}
+
+body.shoppingcart div.buttons a:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
+}
+
+body.shoppingcart div.buttons a.clear {
+  width: 235px;
+}
+
+body.shoppingcart div.buttons a.continue {
+  width: 225px;
+}
+
+body.shoppingcart form {
+  margin-bottom: 80px;
+}
+
+body.shoppingcart form fieldset {
+  width: 360px;
+}
+
+body.shoppingcart form legend {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 23px;
+}
+
+body.shoppingcart form select, body.shoppingcart form input[type="text"] {
+  width: 355px;
+  height: 45px;
+  font-size: 13px;
+  line-height: 45px;
+  font-weight: 300;
+  color: #b0b0b0;
+  margin-bottom: 22px;
+  padding-left: 18px;
+}
+
+body.shoppingcart form input[type="button"] {
+  height: 35px;
+  background-color: #ffffff;
+  border: 1px solid #e9e9e9;
+  font-size: 11px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4b4b4b;
+  text-align: center;
+  padding: 0 17px;
+}
+
+body.shoppingcart form input[type="button"]:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
+}
+
+body.shoppingcart form label {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #000000;
+}
+
+body.shoppingcart form fieldset.total {
+  height: 214px;
+  background-color: #f5f3f3;
+  padding: 40px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  text-align: right;
+}
+
+body.shoppingcart form fieldset.total div.subtotal {
+  font-size: 11px;
+  font-weight: 400;
+  color: #4b4b4b;
+}
+
+body.shoppingcart form fieldset.total div.grandtotal {
+  margin: 14px 0 22px;
+}
+
+body.shoppingcart form fieldset.total div.grandtotal span {
+  color: #f16d7f;
+}
+
+body.shoppingcart form fieldset.total input[type="submit"] {
+  width: 273px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  line-height: 50px;
+  border: 1px solid #e9e9e9;
+}
+
+body.shoppingcart form fieldset.total input[type="submit"]:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
 }
 
 /*!Shoppingcart page*/

@@ -234,11 +234,11 @@ form#search>input[type="image"] {
 .purchase>.delete {font-size: 16px; font-weight: 400; color: #c0c0c0;vertical-align: middle; text-align: right;
 }
 
-.total {display: table-row; font-size: 16px;font-weight: 700; height: 36px; 
+div.total {display: table-row; font-size: 16px;font-weight: 700; height: 36px; 
 }
-.total div {display: table-cell; vertical-align: top;
+div.total div {display: table-cell; vertical-align: top;
 }
-.total div:last-child {text-align: right}
+div.total div:last-child {text-align: right}
 .block-href{display:block; width: 100%; text-align: center; font-size: 12px; font-weight: 700; height: 50px; line-height: 50px; margin-top: 20px; border: 1px solid #222; @include br(3px);}
 .block-href:hover {border-color:$colorRed; color: $colorRed }
 /*Cart styling*/
@@ -511,7 +511,7 @@ article.main-content__chapter .main-content__subscr_light {color:darken($colorLi
 body.shoppingcart {
     table {margin-top: 90px; font-size: 13px; width: 100%;}
     th {height: 50px;font-weight: 700;text-transform: uppercase;letter-spacing: -0.015em; color: $colorDark}
-    td {height: 150px;}
+    td {height: 165px;}
     tr {border-bottom: 1px solid darken($colorLight, 1%);}
     tr,td {text-align: center; vertical-align: middle}
     td>a>div {display: inline-block; text-align: left;}
@@ -519,7 +519,7 @@ body.shoppingcart {
         text-align: left;
         .image {width: 100px; height: 115px; margin-right: 15px;}
         div.name {
-            line-height: 3.2;
+            line-height: 1.2;
             font-weight: 400;
             text-transform: uppercase;
             color: $colorDark;
@@ -529,23 +529,66 @@ body.shoppingcart {
         div.property>.value {font-weight: 300;text-align:right; color: lighten($colorDark, 30%);}
         span{width: 50%}
     }
-    div.buttons a {
-        display: block;
-        font-family: Lato;
-        font-size: 14px;
-        line-height: 50px;
-        height: 50px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: lighten($colorDark, 16%);
-        border: 1px solid darken($colorLight, 1%);
-        text-align: center;
-        {
-            a.clear {width: 235px}
-            a.continue {width:225px}
-        }
+    div.buttons {
+        margin:40px 0 60px;
+        a {
+            display: block;
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 50px;
+            height: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: lighten($colorDark, 16%);
+            border: 1px solid darken($colorLight, 1%);
+            text-align: center;
+            }
+         a:hover {background-color: $colorRed; color: $colorMain}
+        a.clear {width: 235px}
+        a.continue {width:225px}
     }
+    form {
+        margin-bottom: 80px;
+        fieldset {width:360px}
+        legend {font-size: 16px;line-height: 1.2;font-weight: 700;text-transform: uppercase;color: $colorDark;margin-bottom: 23px;}
+        select, input[type="text"] {width: 355px; height: 45px;font-size: 13px;line-height: 45px;font-weight: 300;color: darken($colorMain,31%);margin-bottom: 22px; padding-left:18px}
+        input[type="button"] {
+            height: 35px;
+            background-color: $colorMain;
+            border: 1px solid darken($colorLight, 1%);
+            font-size: 11px;line-height: 35px;font-weight: 700;text-transform: uppercase;color: lighten($colorDark, 16%);
+            text-align: center;
+            padding: 0 17px;
+        }
+        input[type="button"]:hover {background-color: $colorRed; color: $colorMain}
+        label {display: block; margin-bottom: 26px; font-size: 14px;line-height: 1.2;font-weight: 300;color: #000000;}
+        fieldset.total{
+            height: 214px;background-color: #f5f3f3;
+            padding:40px;
+            font-size: 16px;line-height: 1.2;font-weight: 700;text-transform: uppercase; color: $colorDark; text-align: right;
+            div.subtotal{font-size: 11px; font-weight: 400; color: lighten($colorDark, 16%)}
+            div.grandtotal{
+                margin: 14px 0 22px;
+                span {color: $colorRed}
+            }
+            //hr {height: 1px; color: #e2e2e2; margin-bottom: 17px;}
+            input[type="submit"] {
+                width: 273px;
+                height: 50px; 
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $colorDark;
+                line-height: 50px;
+                //color: lighten($colorDark, 16%);
+                border: 1px solid darken($colorLight, 1%);
+            }
+            input[type="submit"]:hover {background-color: $colorRed; color: $colorMain}
+        }
+    }   
 }
+  
 /*!Shoppingcart page*/
 footer nav li a:hover {color:$colorRed}
 #subsribe {
