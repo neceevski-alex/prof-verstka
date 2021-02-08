@@ -2,24 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>shoppingcart-emag</title>
+    <title>product-emag</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 500,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $("#minprice").text("$" +ui.values[ 0 ]);
+            $("#maxprice").text("$" +ui.values[ 1 ]);
+          }
+        });
+        $("#minprice").text($( "#slider-range" ).slider( "values", 0 ));
+        $("#maxprice").text($( "#slider-range" ).slider( "values", 1 ));
+      } );
+      </script> 
 </head>
-<body class="not-front shoppingcart">
+<body class="not-front product">
     <div class="container">
         <div class="main">
             <header class="string flex-container between general">
                 <div id="logo">
                     <a href="#" style="padding-top: 25px"><img src="img/logo.jpg" alt="logo">&nbsp;<span > BRAN<span style="font-weight: 900;color: #f16d7f;">D</span></span></a>
                     <div class="dropdown">
-                        <a  id="browse" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Browse
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a  id="browse" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Browse
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><h6 class="dropdown-header">WOMEN</h6></li>
                             <li class="dropdown-item"><a href="">Dresses</a></li>
                             <li class="dropdown-item"><a href="">Tops</a></li>
@@ -42,8 +62,8 @@
                             <li class="dropdown-item"><a href="">Sweatshirts/Hoodies</a></li>
                             <li class="dropdown-item"><a href="">Blazers</a></li>
                             <li class="dropdown-item"><a href="">Jackets/vests</a></li>
-                        </ul>
-                    </div>
+  </ul>
+</div>
                     <form id="search" action=""><input name="term" type="text" placeholder="Search for item"><input type="image" src="img/find.png">
                     </form>
                 </div>
@@ -426,7 +446,7 @@
                         </div></li>
                 </ul>
             </nav>
-            <section class="main-content">
+            <section class="main-content ">
                 <header class="string">
                     <div class="main-content__page-name">New arrival</div>
                     <div class="main-content__breadcrumbs">
@@ -435,94 +455,216 @@
                         <span>New arrival</span>
                     </div>
                 </header>
-                <article class="string">
-                    <table>
-                        <tr>
-                            <th class="descript">Product Details</th>										 
-                            <th>unite Price</th>
-                            <th>Quantity</th>
-                            <th>shipping</th>
-                            <th>Subtotal</th>
-                            <th>ACTION</th>			
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-1.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-2.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-3.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                    </table>
-                    <div class="buttons flex-container between">
-                        <a class="clear" href="">cLEAR SHOPPING CART</a>
-                        <a class="continue" href="">cONTINUE sHOPPING</a>
-                    </div>
-                    <form action="" id="order" class="flex-container between" style="align-items:start">
-                        <fieldset>
-                            <legend>Shiiping address</legend>
-                            <select id="country">
-                                <option selected value="BGD">Bangladesh</option>
-                                <option value="IRN">Iran</option>
-                                <option value="RUS">Russia</option>   
-                            </select>
-                            <input id="state" placeholder="State" type="text">
-                            <input id="postcode" placeholder="Postcode/Zip" type="text">
-                            <input id="quote" type="button" value="get a qoute">
-                        </fieldset>
-                        <fieldset>
-                            <legend>couopon discount</legend>
-                            <label for="coupon">Enter your coupon code if you have one</label>
-                            <input id="coupon" placeholder="coupon code" type="text">
-                            <input id="coupon" type="button" value="apply coupon">
-                        </fieldset>
-                        <fieldset class="total">
-                            <div class="subtotal">Subtotal&nbsp;$900</div>
-                            <div class="grandtotal">
-                                grandtotall&nbsp;<span>$900</span>
+                <div class="flex-container between start string">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Category
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <a href="" class="taxo">Accessories &#xf190;</a>
+                                <a href="" class="taxo">Bags</a>
+                                <a href="" class="taxo">Denim</a>
+                                <a href="" class="taxo">Hoodies & Sweatshirts</a>
+                                <a href="" class="taxo">Jackets & Coats</a>
+                                <a href="" class="taxo">Pants</a>
+                                <a href="" class="taxo">Polos</a>
+                                <a href="" class="taxo">Shirts</a>
+                                <a href="" class="taxo">Shoes</a>
+                                <a href="" class="taxo">Shorts</a>
+                                <a href="" class="taxo">Sweaters & Knits</a>
+                                <a href="" class="taxo">T-Shirts</a>
+                                <a href="" class="taxo">Tanks</a>
                             </div>
-                            <div style="height: 1px; background-color: #e2e2e2; margin-bottom: 17px;"></div>
-                            <input type="submit" value="proceed to checkout"> 
-                        </fieldset>
-                    </form>
-                </article>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Brand
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <a href="" class="taxo">Brand1</a>
+                                <a href="" class="taxo">Brand2</a>
+                                <a href="" class="taxo">Brand3</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Designer
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <a href="" class="taxo">Designer1</a>
+                                <a href="" class="taxo">Designer2</a>
+                                <a href="" class="taxo">Designer3</a>
+                                <a href="" class="taxo">Designer4</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-and-models ">
+                        <form class="filters">
+                            <div class="flex-container between start" >
+                                <fieldset>
+                                    <legend>Trending now</legend>
+                                    <div class="trends">
+                                        <a class="taxo" href="">Bohemian&nbsp;</a><span>|</span><a class="taxo" href="">&nbsp;Floral&nbsp;</a><span>|</span><a class="taxo" href="">&nbsp;Lace</a>                                   
+                                    </div>
+                                    <div class="trends">
+                                        <a class="taxo" href="">Floral&nbsp;</a><span>|</span><a class="taxo" href="">&nbsp;Lace&nbsp;</a><span>|</span><a class="taxo" href="">&nbsp;Bohemian</a>                                   
+                                    </div>
+                                </fieldset>
+                                <fieldset class="size">
+                                    <legend>Size</legend>
+                                    <input type="checkbox" id="xxs"><label for="xxs">XXS</label>
+                                    <input type="checkbox" id="xs"><label for="xs">XS</label>
+                                    <input type="checkbox" id="s"><label for="s">S</label>
+                                    <input type="checkbox" id="m"><label for="m">M</label><br>
+                                    <input type="checkbox" id="l"><label for="l">L</label>
+                                    <input type="checkbox" id="xl"><label for="xl">XL</label>
+                                    <input type="checkbox" id="xxl"><label for="xxl">XXL</label>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>price</legend>
+                                    <div id="slider-range"></div>
+                                    <div id="price-diapason">
+                                        <div id="minprice"></div><div id="maxprice"></div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="select">
+                                <label for="sort">Sort by</label><select id="sort"><option>Name</option><option>Price</option></select>&nbsp;&nbsp;<label for="show">Show</label><select id="show"><option value="9">09</option><option value="8">08</option></select>
+                            </div>
+                        </form>  
+                        <div id="fetured-items" class=" flex-container around">
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_1.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_2.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_3.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_4.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_5.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_6.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_7.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_8.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                            <div class="items">
+                                <a href="2.html" class="prod-link">
+                                    <div class="image"><img src="img/product_9.jpg" alt=""></div>
+                                    
+                                    <div class="name">Mango People T-shirt</div>
+                                    <div class="price">$52.00</div>
+                                </a>
+                                <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="pagin-view-all">
+                            <!-- <nav aria-label="..."> -->
+                                <ul class="pagination">
+                                  <li class="page-item prev disabled ">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-angle-left"></i></a>
+                                  </li>
+                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item" aria-current="page">
+                                    <a class="page-link" href="#">2</a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item next">
+                                    <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                                  </li>
+                                </ul>
+                              <!-- </nav> -->
+                            <a href="" class="view-all">view all</a>
+                        </div>    
+                    </div>
+                </div>
+                <div id="spec-cond" class="flex-container between string">
+                    <div>
+                        <div class="image"><img src="img/free-deilivery.png"></div>
+                        <header>Free Delivery</header>
+                        <div class="descript">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                    </div>
+                    <div>
+                        <div class="image"><img src="img/sales-discount.png"></div>
+                        <header>Sales & Discount</header>
+                        <div class="descript">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                    </div>
+                    <div>
+                        <div class="image"><img src="img/quality_assurance.png"></div>
+                        <header>Quality Assurance</header>
+                        <div class="descript">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</div>
+                    </div>
+                </div>
             </section>
             <footer>
                 <div id="subsribe" class="string">

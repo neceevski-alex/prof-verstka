@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>shoppingcart-emag</title>
+    <title>single-emag</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;1,100;1,400&display=swap" rel="stylesheet"> 
 </head>
-<body class="not-front shoppingcart">
+<body class="not-front singlepage">
     <div class="container">
         <div class="main">
             <header class="string flex-container between general">
                 <div id="logo">
                     <a href="#" style="padding-top: 25px"><img src="img/logo.jpg" alt="logo">&nbsp;<span > BRAN<span style="font-weight: 900;color: #f16d7f;">D</span></span></a>
                     <div class="dropdown">
-                        <a  id="browse" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Browse
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <a  id="browse" class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Browse
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li><h6 class="dropdown-header">WOMEN</h6></li>
                             <li class="dropdown-item"><a href="">Dresses</a></li>
                             <li class="dropdown-item"><a href="">Tops</a></li>
@@ -42,8 +43,8 @@
                             <li class="dropdown-item"><a href="">Sweatshirts/Hoodies</a></li>
                             <li class="dropdown-item"><a href="">Blazers</a></li>
                             <li class="dropdown-item"><a href="">Jackets/vests</a></li>
-                        </ul>
-                    </div>
+  </ul>
+</div>
                     <form id="search" action=""><input name="term" type="text" placeholder="Search for item"><input type="image" src="img/find.png">
                     </form>
                 </div>
@@ -435,94 +436,84 @@
                         <span>New arrival</span>
                     </div>
                 </header>
-                <article class="string">
-                    <table>
-                        <tr>
-                            <th class="descript">Product Details</th>										 
-                            <th>unite Price</th>
-                            <th>Quantity</th>
-                            <th>shipping</th>
-                            <th>Subtotal</th>
-                            <th>ACTION</th>			
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-1.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-2.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td class="descript">
-                                <a href=""><div class="image"><img src="img/shopcart-3.jpg" alt=""></div>
-                                <div class="text">
-                                    <div class="name">Mango People T-shirt</div>
-                                    <div class="property"><span class="name">Color</span><span class="value">Red</span></div>
-                                    <div class="property"><span class="name">Size</span><span class="value">XII</span></div>
-                                </div></a>
-                            </td>
-                            <td class="price">$150</td>
-                            <td class="quant">2</td>
-                            <td class="ship">FREE</td>
-                            <td class="subtot">300</td>
-                            <td class="action"><a href=""><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-                    </table>
-                    <div class="buttons flex-container between">
-                        <a class="clear" href="">cLEAR SHOPPING CART</a>
-                        <a class="continue" href="">cONTINUE sHOPPING</a>
-                    </div>
-                    <form action="" id="order" class="flex-container between" style="align-items:start">
-                        <fieldset>
-                            <legend>Shiiping address</legend>
-                            <select id="country">
-                                <option selected value="BGD">Bangladesh</option>
-                                <option value="IRN">Iran</option>
-                                <option value="RUS">Russia</option>   
-                            </select>
-                            <input id="state" placeholder="State" type="text">
-                            <input id="postcode" placeholder="Postcode/Zip" type="text">
-                            <input id="quote" type="button" value="get a qoute">
-                        </fieldset>
-                        <fieldset>
-                            <legend>couopon discount</legend>
-                            <label for="coupon">Enter your coupon code if you have one</label>
-                            <input id="coupon" placeholder="coupon code" type="text">
-                            <input id="coupon" type="button" value="apply coupon">
-                        </fieldset>
-                        <fieldset class="total">
-                            <div class="subtotal">Subtotal&nbsp;$900</div>
-                            <div class="grandtotal">
-                                grandtotall&nbsp;<span>$900</span>
+                <div class="bigpicture flex-container between">
+                    <div class="control"><i class="fa fa-angle-left"></i></div>
+                    <img src="img/singlepage-big.jpg">
+                    <div class="control"><i class="fa fa-angle-right"></i></div>
+                </div>
+                <div class="descriptselect">
+                    <div class="description">
+                        <div class="collection-name">WOMEN COLLECTION</div>
+                        <div class="subline"><img src="img/gray-rect-small-1.jpg" alt="cdv"><img src="img/rose_rect_small.jpg" alt="cdv" style='display: inline-block; margin: 0 13px'><img src="img/gray-rect-small-1.jpg" alt="cdv"></div>
+                        <div class="model-name">Moschino Cheap And Chic</div>
+                        <div class="simpletext">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</div>
+                        <div class="propertylist">
+                            <span class="propname">MATERIAL: </span><span class="propvalue">COTTON</span><span class="space"></span><span class="propname">DESIGNER: </span><span class="propvalue">BIN BURHAN</span>
+                        </div>
+                        <div class="price">$561</div>
+                        <div class="line"></div>
+                        <form action="">
+                            <div class="flex-container between">
+                                <div>
+                                    <label for="color">CHOOSE COLOR</label><br>
+                                    <select name="color" id="color">
+                                        <option value="red">Red</option><option value="green">Green</option><option value="white">White</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="size">CHOOSE SIZE</label><br>
+                                    <select name="size" id="size">
+                                        <option value="XXS">XXS</option><option value="XS">XS</option><option value="S">S</option>
+                                        <option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="XXL">XXL</option>
+                                    </select>
+                                </div>
+                                <div><label for="quantity">QUANTITY</label><br><input type="number" min="1" name="quantity" id="quantity"></div>
                             </div>
-                            <div style="height: 1px; background-color: #e2e2e2; margin-bottom: 17px;"></div>
-                            <input type="submit" value="proceed to checkout"> 
-                        </fieldset>
-                    </form>
-                </article>
+                            <button type="submit"><img src="img/backet-red.svg"> Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="gallery string">
+                    <header>you may like also</header>
+                    <div id="fetured-items" class=" flex-container around">
+                        <div class="items">
+                            <a href="2.html" class="prod-link">
+                                <div class="image"><img src="img/single-page-gal-1.jpg" alt=""></div>
+                                
+                                <div class="name">BLAZE LEGGINGS</div>
+                                <div class="price">$52.00</div>
+                            </a>
+                            <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                        </div>
+                        <div class="items">
+                            <a href="2.html" class="prod-link">
+                                <div class="image"><img src="img/single-page-gal-2.jpg" alt=""></div>
+                                
+                                <div class="name">ALEXA SWEATER</div>
+                                <div class="price">$52.00</div>
+                            </a>
+                            <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                        </div>
+                        <div class="items">
+                            <a href="2.html" class="prod-link">
+                                <div class="image"><img src="img/single-page-gal-3.jpg" alt=""></div>
+                                
+                                <div class="name">AGNES TOP</div>
+                                <div class="price">$52.00</div>
+                            </a>
+                            <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                        </div>
+                        <div class="items">
+                            <a href="2.html" class="prod-link">
+                                <div class="image"><img src="img/single-page-gal-4.jpg" alt=""></div>
+                                
+                                <div class="name">SYLVA SWEATERS</div>
+                                <div class="price">$52.00</div>
+                            </a>
+                            <a href="3.html" class="prod-back"><img src="img/backet-white.svg" alt=""> Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
             </section>
             <footer>
                 <div id="subsribe" class="string">
@@ -599,3 +590,4 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>
     </html>
+    

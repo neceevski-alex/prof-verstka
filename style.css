@@ -1,3 +1,7 @@
+/* @font-face{
+    font-family: fontawesome;
+    src: url("font-awesome/fonts/fontawesome-webfont.ttf")
+} */
 html, body {
   height: 100%;
 }
@@ -90,7 +94,7 @@ footer {
 
 /*!footer fixation-5*/
 .string, body.checkout .main-content__chapter {
-  padding: 0 230px;
+  padding: 0 220px;
   /* margin: 50px 0;*/
 }
 
@@ -141,6 +145,7 @@ a:link, a:hover, a:active, a:focus, a:visited {
 .container {
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .flex-container {
@@ -154,6 +159,12 @@ a:link, a:hover, a:active, a:focus, a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .around {
@@ -180,7 +191,7 @@ header.general > div {
   color: #222222;
 }
 
-/*My override styles for Bootstrap*/
+/*My override styles for button Bootstrap*/
 .dropdown-item.active, .dropdown-item:active {
   color: #1e2125;
   background-color: #657d94;
@@ -236,7 +247,62 @@ li.dropdown-item {
   border: 1px solid #f16d7f;
 }
 
-/*! override styles for Bootstrap*/
+/*! override styles for button Bootstrap*/
+/*My override styles Bootstrap accordion*/
+.accordion-button:not(.collapsed) {
+  color: #222;
+  background-color: white;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #e8e8e8;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
+          box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
+}
+
+/*!My override styles Bootstrap accordion*/
+/*My override styles Bootstrsp pagination*/
+.pagination {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  /*.page-link, */
+}
+
+.pagination .page-item {
+  border: none;
+}
+
+.pagination .page-item .page-link {
+  background: none;
+  color: #c4c4c4;
+  border: none;
+}
+
+.pagination .page-link:focus {
+  color: #c4c4c4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.pagination .page-link:hover {
+  color: #c4c4c4;
+}
+
+.pagination .page-item.active .page-link {
+  color: #ef5b70;
+}
+
+.pagination .page-item.prev:not(.disabled) .page-link {
+  color: #ef5b70;
+}
+
+.pagination .page-item.next:not(.disabled) .page-link {
+  color: #ef5b70;
+}
+
+/*!My override styles Bootstrsp pagination*/
 /*#logo>a>img{
     position: relative;
     top: 25px;
@@ -879,19 +945,6 @@ body.checkout .accordion > .accordion-item > h2.accordion-header > button.accord
   height: 72px;
 }
 
-body.checkout .accordion-button:not(.collapsed) {
-  color: #222;
-  background-color: white;
-}
-
-body.checkout .accordion-button:focus {
-  z-index: 3;
-  border-color: #e8e8e8;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
-          box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
-}
-
 body.checkout div.accordion > div.accordion-item > div.accordion-collapse.collapse > div.accordion-body form > * {
   font-size: 13px;
   margin-left: 35px;
@@ -1046,15 +1099,15 @@ body.shoppingcart div.buttons a.continue {
   width: 225px;
 }
 
-body.shoppingcart form {
+body.shoppingcart form#order {
   margin-bottom: 80px;
 }
 
-body.shoppingcart form fieldset {
+body.shoppingcart form#order fieldset {
   width: 360px;
 }
 
-body.shoppingcart form legend {
+body.shoppingcart form#order legend {
   font-size: 16px;
   line-height: 1.2;
   font-weight: 700;
@@ -1063,7 +1116,7 @@ body.shoppingcart form legend {
   margin-bottom: 23px;
 }
 
-body.shoppingcart form select, body.shoppingcart form input[type="text"] {
+body.shoppingcart form#order select, body.shoppingcart form#order input[type="text"] {
   width: 355px;
   height: 45px;
   font-size: 13px;
@@ -1074,7 +1127,7 @@ body.shoppingcart form select, body.shoppingcart form input[type="text"] {
   padding-left: 18px;
 }
 
-body.shoppingcart form input[type="button"] {
+body.shoppingcart form#order input[type="button"] {
   height: 35px;
   background-color: #ffffff;
   border: 1px solid #e9e9e9;
@@ -1087,12 +1140,12 @@ body.shoppingcart form input[type="button"] {
   padding: 0 17px;
 }
 
-body.shoppingcart form input[type="button"]:hover {
+body.shoppingcart form#order input[type="button"]:hover {
   background-color: #f16d7f;
   color: #ffffff;
 }
 
-body.shoppingcart form label {
+body.shoppingcart form#order label {
   display: block;
   margin-bottom: 26px;
   font-size: 14px;
@@ -1101,7 +1154,7 @@ body.shoppingcart form label {
   color: #000000;
 }
 
-body.shoppingcart form fieldset.total {
+body.shoppingcart form#order fieldset.total {
   height: 214px;
   background-color: #f5f3f3;
   padding: 40px;
@@ -1113,21 +1166,21 @@ body.shoppingcart form fieldset.total {
   text-align: right;
 }
 
-body.shoppingcart form fieldset.total div.subtotal {
+body.shoppingcart form#order fieldset.total div.subtotal {
   font-size: 11px;
   font-weight: 400;
   color: #4b4b4b;
 }
 
-body.shoppingcart form fieldset.total div.grandtotal {
+body.shoppingcart form#order fieldset.total div.grandtotal {
   margin: 14px 0 22px;
 }
 
-body.shoppingcart form fieldset.total div.grandtotal span {
+body.shoppingcart form#order fieldset.total div.grandtotal span {
   color: #f16d7f;
 }
 
-body.shoppingcart form fieldset.total input[type="submit"] {
+body.shoppingcart form#order fieldset.total input[type="submit"] {
   width: 273px;
   height: 50px;
   text-align: center;
@@ -1139,12 +1192,367 @@ body.shoppingcart form fieldset.total input[type="submit"] {
   border: 1px solid #e9e9e9;
 }
 
-body.shoppingcart form fieldset.total input[type="submit"]:hover {
+body.shoppingcart form#order fieldset.total input[type="submit"]:hover {
   background-color: #f16d7f;
   color: #ffffff;
 }
 
 /*!Shoppingcart page*/
+/*Product page*/
+body.product {
+  font-size: 14px;
+}
+
+body.product div.accordion, body.product fieldset {
+  width: 265px;
+}
+
+body.product div.accordion {
+  margin-right: 50px;
+}
+
+body.product fieldset {
+  border: 0px;
+}
+
+body.product legend {
+  padding-left: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+body.product div.accordion button {
+  text-transform: uppercase;
+  background-image: url("img/red-marker.jpg");
+  background-position: center left;
+  background-repeat: no-repeat;
+  height: 37px;
+  padding-left: 16px;
+}
+
+body.product .accordion-button::after {
+  background-image: url("img/caret_down.png");
+  background-size: 9px;
+  background-position: right center;
+}
+
+body.product .accordion-button:not(.collapsed) {
+  color: #f16d7f;
+}
+
+body.product .accordion-button:not(.collapsed)::after {
+  background-image: url("img/caret_up_red.png");
+  -webkit-transform: none;
+          transform: none;
+}
+
+body.product div.accordion-body > a {
+  display: block;
+}
+
+body.product div.form-and-models {
+  width: 100%;
+  max-width: 845px;
+}
+
+body.product a.taxo {
+  line-height: 33px;
+  font-weight: 400;
+  color: #6f6e6e;
+}
+
+body.product .trends > a.taxo {
+  display: inline-block;
+  line-height: 26px;
+}
+
+body.product .trends > span {
+  color: #dfdfdf;
+}
+
+body.product .size {
+  line-height: 20px;
+}
+
+body.product .size label {
+  margin: 0 10px;
+}
+
+body.product #price-diapason {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+body.product #price-diapason > div {
+  position: absolute;
+}
+
+body.product #minprice {
+  left: 0;
+}
+
+body.product #maxprice {
+  right: 0;
+}
+
+body.product #slider-range {
+  height: 6px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+
+body.product #slider-range > .ui-slider-range, body.product #slider-range > span.ui-slider-handle {
+  border: 1px solid #f16d7f;
+  background-color: #f16d7f;
+}
+
+body.product #slider-range > span.ui-slider-handle {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  outline: none;
+}
+
+body.product div.select {
+  height: 50px;
+  background-color: #f3f3f3;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+body.product div.select > * {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 10px;
+}
+
+body.product div.select > select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #fff url("img/caret_down.png") no-repeat right center;
+}
+
+body.product select#sort {
+  width: 70px;
+}
+
+body.product select#show {
+  width: 45px;
+}
+
+body.product .pagin-view-all {
+  margin: 40px 0 110px;
+  height: 44px;
+}
+
+body.product .pagin-view-all > * {
+  height: 44px;
+}
+
+body.product .pagination {
+  float: left;
+}
+
+body.product .pagination .page-item {
+  line-height: 30px;
+}
+
+body.product a.view-all {
+  display: block;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #ef5b70;
+  width: 150px;
+  border: 1px solid #ef5b70;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  float: right;
+}
+
+body.product #spec-cond {
+  height: 341px;
+  background-color: #222224;
+}
+
+body.product #spec-cond > div {
+  width: 310px;
+}
+
+body.product #spec-cond > div > * {
+  text-align: center;
+  color: #fbfbfb;
+}
+
+body.product #spec-cond .image {
+  height: 40px;
+}
+
+body.product #spec-cond header {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  margin: 28px 0 19px;
+}
+
+body.product #spec-cond .descript {
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+}
+
+body.product section.main-content {
+  margin-bottom: 0;
+}
+
+/*!Product page*/
+/*Single page*/
+body.singlepage .bigpicture {
+  height: 777px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+}
+
+body.singlepage .control {
+  width: 47px;
+  height: 47px;
+  background-color: rgba(42, 42, 42, 0.14);
+  font-size: 24px;
+  line-height: 47px;
+  text-align: center;
+  font-weight: 400;
+}
+
+body.singlepage .control i {
+  color: #fff;
+}
+
+body.singlepage .descriptselect {
+  max-width: 1141px;
+  min-height: 730px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  margin: 0 auto;
+  padding: 70px 0;
+  position: relative;
+  top: -75px;
+}
+
+body.singlepage .descriptselect .description > div {
+  text-align: center;
+}
+
+body.singlepage .descriptselect .description {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+body.singlepage .descriptselect .description div.collection-name {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #f16d7f;
+}
+
+body.singlepage .descriptselect .description div.model-name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4d4d4d;
+}
+
+body.singlepage .descriptselect .description div.simpletext {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #5e5e5e;
+  margin: 67px 0 28px;
+}
+
+body.singlepage .descriptselect .description div.propertylist {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+body.singlepage .descriptselect .description div.propertylist span.propname {
+  color: #b9b9b9;
+}
+
+body.singlepage .descriptselect .description div.propertylist span.propvalue {
+  color: #2f2f2f;
+}
+
+body.singlepage .descriptselect .description div.propertylist span.space {
+  display: inline-block;
+  width: 45px;
+}
+
+body.singlepage .descriptselect .description div.price {
+  margin: 45px 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ef5b70;
+}
+
+body.singlepage .descriptselect .description div.line {
+  height: 1px;
+  background-color: #ef5b70;
+  border: 1px solid #eaeaea;
+  margin-bottom: 60px;
+}
+
+body.singlepage .descriptselect .description form {
+  max-width: 620px;
+  margin-bottom: 0 auto 120px;
+}
+
+body.singlepage .descriptselect .description form label {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+body.singlepage .descriptselect .description form button {
+  font-size: 16px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #ef5b70;
+  height: 55px;
+  background-color: #ffffff;
+  border: 1px solid #ef5b70;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+body.singlepage .descriptselect .description form input, body.singlepage .descriptselect .description form select {
+  width: 145px;
+  height: 35px;
+}
+
+body.singlepage div.gallery header {
+  margin: 45px 0 70px;
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #4d4d4d;
+}
+
+/*!Single page*/
 footer nav li a:hover {
   color: #f16d7f;
 }
