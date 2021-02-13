@@ -353,10 +353,19 @@ form#search > input[type="image"] {
   height: 38px;
 }
 
-#account img, #account #count {
-  display: inline-block;
+#backet {
+  position: relative;
 }
 
+#backet #count {
+  position: absolute;
+  top: -5px;
+  left: 25px;
+}
+
+/* #account img, #account #count {
+    display: inline-block;
+} */
 /*#account img {
 	position: relative;
 	top: 21px;
@@ -1193,6 +1202,24 @@ body.shoppingcart form#order fieldset.total input[type="submit"] {
 }
 
 body.shoppingcart form#order fieldset.total input[type="submit"]:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
+}
+
+body.shoppingcart form#order fieldset.total a#submit {
+  display: block;
+  width: 273px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  line-height: 50px;
+  border: 1px solid #e9e9e9;
+}
+
+body.shoppingcart form#order fieldset.total a#submit:hover {
   background-color: #f16d7f;
   color: #ffffff;
 }
