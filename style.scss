@@ -221,9 +221,15 @@ form#search>input[type="image"] {
     border: 1px solid black;
     height: 38px
 }
-#account img, #account #count {
-    display: inline-block;
+#backet {position: relative;}
+#backet #count {
+    position: absolute;
+    top: -5px;
+    left: 25px;
 }
+/* #account img, #account #count {
+    display: inline-block;
+} */
 /*#account img {
 	position: relative;
 	top: 21px;
@@ -251,6 +257,7 @@ form#search>input[type="image"] {
     #myac:hover {background-color: $colorRed; color: $colorMain}
     #myac:hover>*{background-color: $colorRed; color: $colorMain}
 }
+
 /*Cart styling*/
 
 /* acco#unt .livecart {padding:20px 18px; background-color: $colorMain;border-radius: 5px; right: 40px;} */
@@ -631,6 +638,19 @@ body.shoppingcart {
                 border: 1px solid darken($colorLight, 1%);
             }
             input[type="submit"]:hover {background-color: $colorRed; color: $colorMain}
+            a#submit{
+                display: block;
+                width: 273px;
+                height: 50px; 
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $colorDark;
+                line-height: 50px;
+                border: 1px solid darken($colorLight, 1%);
+            }
+            a#submit:hover{background-color: $colorRed; color: $colorMain}
         }
     }   
 }
